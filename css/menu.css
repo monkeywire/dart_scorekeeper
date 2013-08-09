@@ -1,0 +1,32 @@
+#menu {
+    font-family: Leah;
+    font-weight: bold;
+    position: absolute;
+    background-color: yellow;
+    text-align: center;
+    font-size: 5mm;
+}
+
+#menu-button {
+    padding: 7.5px;
+
+}
+
+
+@media (max-width: 767px) {
+    #menu {
+        font-size: 4mm;
+    }
+}
+
+@media (max-width: 480px) {
+    #menu {
+        font-size: 4mm;
+    }
+}
+
+@media (max-width: 320px) {
+    #menu {
+        font-size: 3mm;
+    }
+}

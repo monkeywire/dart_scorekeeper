@@ -1,0 +1,92 @@
+<img src="Untitled" width="600" height="600" border="0" usemap="#map" />
+
+<map name="map">
+<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.3 -->
+<!-- #$AUTHOR:roger   -->
+<area shape="poly" coords="334,77,333,89,296,86,267,89,264,77,298,74" onfocus="game.addDart(&apos;d20&apos;, 40, true);"  nohref="nohref" />
+<area shape="poly" coords="267,89,297,87,333,89,321,160,298,158,278,160" onfocus="game.addDart(&apos;20&apos;, 20);"  nohref="nohref" />
+<area shape="poly" coords="278,160,298,159,321,161,320,172,297,171,279,172" onfocus="game.addDart(&apos;t20&apos;, 60);"  nohref="nohref" />
+<area shape="poly" coords="280,172,320,172,303,278,297,278" onfocus="game.addDart(&apos;20&apos;, 20);"  nohref="nohref" />
+<area shape="poly" coords="197,99,231,86,264,77,267,89,235,96,202,110" onfocus="game.addDart(&apos;d5&apos;, 10, true);"  nohref="nohref" />
+<area shape="poly" coords="202,110,234,97,267,89,278,160,253,167,236,174" onfocus="game.addDart(&apos;5&apos;, 5);"  nohref="nohref" />
+<area shape="poly" coords="235,174,254,167,278,161,279,172,259,176,240,184" onfocus="game.addDart(&apos;t5&apos;, 15);"  nohref="nohref" />
+<area shape="poly" coords="240,185,259,176,279,172,297,278,289,281" onfocus="game.addDart(&apos;5&apos;, 5);"  nohref="nohref" />
+<area shape="poly" coords="140,140,165,120,196,100,202,111,175,127,149,149" onfocus="game.addDart(&apos;d12&apos;, 24, true);"  nohref="nohref" />
+<area shape="poly" coords="149,149,174,128,202,111,236,175,214,186,201,200" onfocus="game.addDart(&apos;`12&apos;, 12);"  nohref="nohref" />
+<area shape="poly" coords="200,199,216,187,236,174,241,185,222,196,207,208" onfocus="game.addDart(&apos;t12&apos;, 36);"  nohref="nohref" />
+<area shape="poly" coords="209,208,222,196,240,186,289,281,285,284" onfocus="game.addDart(&apos;12&apos;, 12);"  nohref="nohref" />
+<area shape="poly" coords="140,140,149,149,126,175,109,203,99,198,118,167" onfocus="game.addDart(&apos;d9&apos;, 18, true);"  nohref="nohref" />
+<area shape="poly" coords="110,203,126,175,149,149,200,200,184,218,174,236" onfocus="game.addDart(&apos;9&apos;, 9);"  nohref="nohref" />
+<area shape="poly" coords="184,242,193,225,207,208,200,200,184,219,174,236" onfocus="game.addDart(&apos;t9&apos;, 27);"  nohref="nohref" />
+<area shape="poly" coords="185,242,194,224,208,208,285,284,280,291" onfocus="game.addDart(&apos;9&apos;, 9);"  nohref="nohref" />
+<area shape="poly" coords="99,197,86,229,77,265,90,266,97,235,110,203" onfocus="game.addDart(&apos;d14&apos;, 28, true);"  nohref="nohref" />
+<area shape="poly" coords="89,265,160,277,164,257,174,235,110,204,98,229" onfocus="game.addDart(&apos;14&apos;, 14);"  nohref="nohref" />
+<area shape="poly" coords="160,277,172,279,183,242,175,236,166,255" onfocus="game.addDart(&apos;t14&apos;, 3 * 14);"  nohref="nohref" />
+<area shape="poly" coords="184,242,280,291,279,296,172,279,177,260" onfocus="game.addDart(&apos;14&apos;, 14);"  nohref="nohref" />
+<area shape="poly" coords="77,266,75,299,77,335,89,333,87,303,88,267" onfocus="game.addDart(&apos;d11&apos;,22, true);"  nohref="nohref" />
+<area shape="poly" coords="89,333,87,295,89,266,161,278,159,300,161,322" onfocus="game.addDart(&apos;11&apos;, 11);"  nohref="nohref" />
+<area shape="poly" coords="160,321,172,320,170,300,171,279,160,278,159,300" onfocus="game.addDart(&apos;t11&apos;, 33);"  nohref="nohref" />
+<area shape="poly" coords="172,321,170,299,171,278,279,296,279,304" onfocus="game.addDart(&apos;11&apos;, 11);"  nohref="nohref" />
+<area shape="poly" coords="77,336,90,333,97,365,109,396,99,402,85,370" onfocus="game.addDart(&apos;d8&apos;, 16, true);"  nohref="nohref" />
+<area shape="poly" coords="109,396,173,364,165,344,160,322,89,333,96,365" onfocus="game.addDart(&apos;8&apos;, 8);"  nohref="nohref" />
+<area shape="poly" coords="173,363,184,358,176,341,172,321,160,321,164,341" onfocus="game.addDart(&apos;t8&apos;, 8 * 3);"  nohref="nohref" />
+<area shape="poly" coords="184,357,177,338,173,320,279,303,280,309" onfocus="game.addDart(&apos;8&apos;, 8);"  nohref="nohref" />
+<area shape="poly" coords="99,403,116,431,140,459,149,451,129,428,109,396" onfocus="game.addDart(&apos;d16&apos;, 2 * 16, true);"  nohref="nohref" />
+<area shape="poly" coords="149,451,201,400,185,382,173,363,110,396,125,423" onfocus="game.addDart(&apos;16&apos;, 16);"  nohref="nohref" />
+<area shape="poly" coords="200,400,209,391,192,373,184,358,174,364,184,380" onfocus="game.addDart(&apos;t16&apos;, 3 * 16);"  nohref="nohref" />
+<area shape="poly" coords="208,392,285,316,280,309,184,359,194,375" onfocus="game.addDart(&apos;16&apos;, 16);"  nohref="nohref" />
+<area shape="poly" coords="198,501,202,490,175,473,149,451,141,459,164,481" onfocus="game.addDart(&apos;d7&apos;, 14, true);"  nohref="nohref" />
+<area shape="poly" coords="202,489,172,469,150,450,200,401,213,412,235,427" onfocus="game.addDart(&apos;7&apos;,  7);"  nohref="nohref" />
+<area shape="poly" coords="235,425,241,415,223,403,209,392,200,401,214,413" onfocus="game.addDart(&apos;t7&apos;, 21);"  nohref="nohref" />
+<area shape="poly" coords="240,415,289,320,285,315,209,391,221,403" onfocus="game.addDart(&apos;7&apos;, 7);"  nohref="nohref" />
+<area shape="poly" coords="265,523,267,510,231,502,202,491,198,501,228,514" onfocus="game.addDart(&apos;d19&apos;, 19 * 2, true);"  nohref="nohref" />
+<area shape="poly" coords="266,510,234,503,202,490,236,424,255,434,277,440" onfocus="game.addDart(&apos;19&apos;, 19);"  nohref="nohref" />
+<area shape="poly" coords="277,439,253,433,236,425,242,415,258,423,279,428" onfocus="game.addDart(&apos;t19&apos;, 19 * 3);"  nohref="nohref" />
+<area shape="poly" coords="280,427,258,423,241,415,290,319,297,321" onfocus="game.addDart(&apos;19&apos;, 19);"  nohref="nohref" />
+<area shape="poly" coords="265,523,266,510,299,513,333,511,335,522,298,525" onfocus="game.addDart(&apos;d3&apos;, 6, true);"  nohref="nohref" />
+<area shape="poly" coords="267,510,278,440,299,442,322,440,332,511,298,513,299,513,288,512" onfocus="game.addDart(&apos;3&apos;, 3);"  nohref="nohref" />
+<area shape="poly" coords="321,439,300,441,278,439,280,428,297,429,320,428" onfocus="game.addDart(&apos;t3&apos;, 9);"  nohref="nohref" />
+<area shape="poly" coords="280,427,296,322,303,322,319,428,299,429" onfocus="game.addDart(&apos;3&apos;, 3);"  nohref="nohref" />
+<area shape="poly" coords="335,523,372,514,402,501,396,489,365,503,333,511" onfocus="game.addDart(&apos;d17&apos;, 17 * 2, true);"  nohref="nohref" />
+<area shape="poly" coords="332,510,366,503,396,489,364,426,342,435,322,440" onfocus="game.addDart(&apos;17&apos;, 17);"  nohref="nohref" />
+<area shape="poly" coords="321,438,344,434,365,426,359,415,340,423,320,428" onfocus="game.addDart(&apos;t17&apos;, 17 * 3);"  nohref="nohref" />
+<area shape="poly" coords="320,427,339,423,359,415,310,319,303,321" onfocus="game.addDart(&apos;17&apos;, 17);"  nohref="nohref" />
+<area shape="poly" coords="402,500,435,480,458,458,450,450,425,472,397,489" onfocus="game.addDart(&apos;d2&apos;, 4, true);"  nohref="nohref" />
+<area shape="poly" coords="396,488,423,474,450,450,400,399,381,416,364,425" onfocus="game.addDart(&apos;2&apos;, 2);"  nohref="nohref" />
+<area shape="poly" coords="363,425,382,415,400,400,391,392,375,404,358,415" onfocus="game.addDart(&apos;t2&apos;, 6);"  nohref="nohref" />
+<area shape="poly" coords="358,414,375,405,391,392,315,317,311,320" onfocus="game.addDart(&apos;2&apos;, 2);"  nohref="nohref" />
+<area shape="poly" coords="459,458,479,435,500,403,490,397,473,424,450,451" onfocus="game.addDart(&apos;d15&apos;, 30, true);"  nohref="nohref" />
+<area shape="poly" coords="450,451,473,424,490,397,426,364,415,382,400,400" onfocus="game.addDart(&apos;15&apos;, 15);"  nohref="nohref" />
+<area shape="poly" coords="399,400,391,391,405,376,415,359,426,364,414,383" onfocus="game.addDart(&apos;t15&apos;, 45);"  nohref="nohref" />
+<area shape="poly" coords="391,392,406,375,415,358,320,309,315,317" onfocus="game.addDart(&apos;15&apos;, 15);"  nohref="nohref" />
+<area shape="poly" coords="501,402,513,373,522,335,511,333,502,364,490,396" onfocus="game.addDart(&apos;d10&apos;, 20, true);"  nohref="nohref" />
+<area shape="poly" coords="490,395,502,365,510,334,440,322,435,343,426,363" onfocus="game.addDart(&apos;10&apos;, 10);"  nohref="nohref" />
+<area shape="poly" coords="426,363,434,346,439,321,427,321,422,341,415,358" onfocus="game.addDart(&apos;t10&apos;, 30);"  nohref="nohref" />
+<area shape="poly" coords="415,358,423,340,427,320,321,304,320,310" onfocus="game.addDart(&apos;10&apos;, 10);"  nohref="nohref" />
+<area shape="poly" coords="522,335,510,333,513,297,510,266,522,265,524,303" onfocus="game.addDart(&apos;d6&apos;, 12, true);"  nohref="nohref" />
+<area shape="poly" coords="511,334,513,297,510,266,439,277,441,305,440,322" onfocus="game.addDart(&apos;6&apos;, 6);"  nohref="nohref" />
+<area shape="poly" coords="440,322,440,299,440,277,428,279,429,299,428,320" onfocus="game.addDart(&apos;t6&apos;, 18);"  nohref="nohref" />
+<area shape="poly" coords="427,320,429,299,427,279,321,296,321,304" onfocus="game.addDart(&apos;6&apos;, 6);"  nohref="nohref" />
+<area shape="poly" coords="500,198,515,233,522,265,510,267,503,236,489,202" onfocus="game.addDart(&apos;d13&apos;, 26, true);"  nohref="nohref" />
+<area shape="poly" coords="489,204,502,233,510,265,439,277,435,255,426,236" onfocus="game.addDart(&apos;13&apos;, 13);"  nohref="nohref" />
+<area shape="poly" coords="439,277,427,279,423,261,415,241,425,236,434,256" onfocus="game.addDart(&apos;t13&apos;, 39);"  nohref="nohref" />
+<area shape="poly" coords="428,279,423,261,415,242,319,290,321,296" onfocus="game.addDart(&apos;13&apos;, 13);"  nohref="nohref" />
+<area shape="poly" coords="500,198,484,169,459,141,450,149,470,171,490,204" onfocus="game.addDart(&apos;d4&apos;, 8, true);"  nohref="nohref" />
+<area shape="poly" coords="489,203,474,175,450,149,399,200,414,217,426,236" onfocus="game.addDart(&apos;4&apos;, 4);"  nohref="nohref" />
+<area shape="poly" coords="426,235,415,241,405,223,391,208,400,201,413,217,414,217,417,222" onfocus="game.addDart(&apos;t4&apos;, 12);"  nohref="nohref" />
+<area shape="poly" coords="415,241,405,224,391,207,314,285,320,290" onfocus="game.addDart(&apos;4&apos;, 4);"  nohref="nohref" />
+<area shape="poly" coords="459,140,433,118,402,100,397,110,422,125,450,149" onfocus="game.addDart(&apos;d18&apos;, 18 * 2, true);"  nohref="nohref" />
+<area shape="poly" coords="449,149,423,126,396,110,365,174,381,183,400,199" onfocus="game.addDart(&apos;18&apos;, 18);"  nohref="nohref" />
+<area shape="poly" coords="399,200,389,208,374,194,359,185,364,174,382,185" onfocus="game.addDart(&apos;t18&apos;, 18 * 3);"  nohref="nohref" />
+<area shape="poly" coords="390,208,375,194,359,184,310,280,315,284" onfocus="game.addDart(&apos;18&apos;, 18);"  nohref="nohref" />
+<area shape="poly" coords="401,99,369,85,334,78,333,89,359,95,397,110" onfocus="game.addDart(&apos;d1&apos;, 2, true);"  nohref="nohref" />
+<area shape="poly" coords="397,110,364,96,333,90,321,160,344,165,365,174" onfocus="game.addDart(&apos;1&apos;, 1);"  nohref="nohref" />
+<area shape="poly" coords="363,174,342,165,321,160,320,172,337,175,359,184" onfocus="game.addDart(&apos;t1&apos;, 3);"  nohref="nohref" />
+<area shape="poly" coords="359,184,337,175,320,173,303,279,311,280" onfocus="game.addDart(&apos;1&apos;, 1);"  nohref="nohref" />
+<area shape="circle" coords="300,300,21" onfocus="game.addDart(&apos;iris&apos;, 25);"  nohref="nohref" />
+<area shape="circle" coords="300,300,9" onfocus="game.addDart(&apos;bull&apos;, 50, true);"  nohref="nohref" />
+<area shape="circle" coords="299,300,303" onfocus="game.addDart(&apos;miss&apos;, 0);"  nohref="nohref" />
+</map>

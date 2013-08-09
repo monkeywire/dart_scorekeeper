@@ -1,0 +1,33 @@
+/* @license
+ * MyFonts Webfont Build ID 2601962, 2013-07-14T16:04:20-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Leah by Scholtz Fonts
+ * URL: http://www.myfonts.com/fonts/scholtz/leah/regular/
+ * Copyright: Copyright (c) 2008 by Scholtz Fonts. All rights reserved.
+ *
+ * Webfont: Mr Chalk by Thinkdust
+ * URL: http://www.myfonts.com/fonts/thinkdust/mr-chalk/regular/
+ * Copyright: Copyright (c) 2012 by Hypefortype. All rights reserved.
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2601962
+ *
+ * © 2013 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work
+@import url("//hello.myfonts.net/count/27b3ea");*/
+
+
+@font-face {font-family: 'Leah';src: url('webfonts/27B3EA_0_0.eot');src: url('webfonts/27B3EA_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/27B3EA_0_0.woff') format('woff'),url('webfonts/27B3EA_0_0.ttf') format('truetype'),url('webfonts/27B3EA_0_0.svg#wf') format('svg');}
+
+
+@font-face {font-family: 'MrChalk';src: url('webfonts/27B3EA_1_0.eot');src: url('webfonts/27B3EA_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/27B3EA_1_0.woff') format('woff'),url('webfonts/27B3EA_1_0.ttf') format('truetype'),url('webfonts/27B3EA_1_0.svg#wf') format('svg');}
+
