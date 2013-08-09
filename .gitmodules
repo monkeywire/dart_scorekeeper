@@ -1,0 +1,3 @@
+[submodule "js/vendor/simple-js-darts"]
+	path = js/vendor/simple-js-darts
+	url = git@github.com:monkeywire/simple-js-darts.git
