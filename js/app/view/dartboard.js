@@ -51,7 +51,7 @@ Dartboard.prototype.endTurn = function() {
         game.addDart(dart.label, dart.value);
     });
     this.darts.removeAllDarts();
-    this.endTurnButton.hide();
+    //this.endTurnButton.hide();
     play.randomChalkSound();
 }
 

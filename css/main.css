@@ -85,6 +85,9 @@ header {
   background-image: url('../img/green_check.png');
   background-size: 100% 100%;
   visibility: hidden;
+  box-shadow: 10px 10px 15px #000000;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
 }
 
 /* ==========================================================================

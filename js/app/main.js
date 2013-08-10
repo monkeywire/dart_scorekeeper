@@ -7,6 +7,7 @@ var dartboard  = new Dartboard();
 var chalkboard = new Chalkboard();
 var menu       = new Menu();
 var play       = new SoundManager();
+var animate    = new AnimationManager();
 
 //Bind window resize events
 window.onresize = function(event) { layout.onResize(); };
@@ -32,4 +33,5 @@ newGame = function() {
 
     game.updateView();
     menu.toggleMenu();
+    dartboard.endTurnButton.show();
 }
