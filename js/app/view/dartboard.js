@@ -47,9 +47,14 @@ Dartboard.prototype.boardLocationCallback = function(label, value) {
 }
 
 Dartboard.prototype.endTurn = function() {
-    this.darts.allDarts().forEach(function(dart) {
-        game.addDart(dart.label, dart.value);
-    });
+    var darts = this.darts.allDarts();
+    for(i = 0; i <= 2; i++) {
+        if(darts[i]) {
+            game.addDart(darts[i].label, darts[i].value);
+        } else {
+            game.addDart('miss', 0);
+        }
+    }
     this.darts.removeAllDarts();
     //this.endTurnButton.hide();
     play.randomChalkSound();
