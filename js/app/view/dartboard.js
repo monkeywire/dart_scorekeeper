@@ -52,5 +52,6 @@ Dartboard.prototype.endTurn = function() {
     });
     this.darts.removeAllDarts();
     this.endTurnButton.hide();
+    play.randomChalkSound();
 }
 
