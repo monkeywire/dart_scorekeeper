@@ -7,6 +7,10 @@
     position: absolute;
 }
 
+.chalk-board-score {
+    vertical-align: top;
+}
+
 .player-scores {
     vertical-align: top;
     text-align: center;

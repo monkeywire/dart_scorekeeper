@@ -8,8 +8,8 @@ Chalkboard = function() {
 
 Chalkboard.prototype.setPlayerScore = function(index, score) {
     switch(index) {
-        case 0: this.player1.innerHTML = score; break;
-        case 1: this.player2.innerHTML = score; break;
+        case 0: this.player1.innerHTML += "<br/>" + score; break;
+        case 1: this.player2.innerHTML += "<br/>" + score; break;
     }
 }
 

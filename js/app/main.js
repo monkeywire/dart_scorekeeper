@@ -20,15 +20,23 @@ newGame = function() {
     //TODO Remove hard coding for 301
     game = new Game_01(['Player1', 'Player2'], 3);
     game.updateView = function() {
+
+        //TODO better player is winner handling
         if(game.playerScoreByIndex(0) == 301 || game.playerScoreByIndex(1) == 301) {
             alert('We Have A Winner');
-            this.toggleMenu();
+            menu.toggleMenu();
         }
         //TODO remove hard coded 301
-        chalkboard.setPlayerScore(0, 301 - game.playerScoreByIndex(0));
-        chalkboard.setPlayerScore(1, 301 - game.playerScoreByIndex(1));
+        //alert(this.prevPlayerIndex != game.playerTurn);
+        if(this.prevPlayerIndex != game.playerTurn) {
+            chalkboard.setPlayerScore(this.prevPlayerIndex, 301 - game.playerScoreByIndex(0));
+        }
+        //chalkboard.setPlayerScore(0, 301 - game.playerScoreByIndex(0));
+        //chalkboard.setPlayerScore(1, 301 - game.playerScoreByIndex(1));
         chalkboard.setRound('Round ' + game.round);
         chalkboard.setTurn(game.currentPlayerName() + '\'s Turn');
+        this.prevPlayerIndex = game.playerTurn;
+
     };
 
     game.updateView();
