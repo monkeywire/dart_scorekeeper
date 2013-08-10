@@ -1,4 +1,5 @@
 /* Handles the sizing and layout of screen elements */
+// TODO: See if we can move allot of this JS to CSS3*/
 Layout = function() {
     this.dartLocation = document.getElementById('dart-location-box');
     this.chalkBoard   = document.getElementById('chalk-board');
@@ -28,10 +29,10 @@ Layout.prototype.onResize = function() {
         var chalkBoardLeft = dartBoardLeft + dartBoardWidth + (width * (1/10));
         var chalkBoardTop = dartBoardTop + (dartBoardHeight * (2/10));
 
-        var menuWidth = dartBoardWidth * (6/10);
+        var menuWidth = dartBoardWidth * (7/10);
         var menuHeight = menuWidth;
-        var menuLeft = dartBoardLeft + (dartBoardLeft * (8/10));
-        var menuTop = dartBoardTop + (dartBoardWidth * (2/10));
+        var menuLeft = dartBoardLeft + (dartBoardLeft * (7/10));
+        var menuTop = dartBoardTop + (dartBoardWidth * (1/10));
     } else { //Portrait
         var dartBoardWidth = Math.min(width * (8/10), height * (6/10));
         var dartBoardHeight = dartBoardWidth;
