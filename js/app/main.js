@@ -6,6 +6,7 @@ var layout = new Layout();
 var dartboard  = new Dartboard();
 var chalkboard = new Chalkboard();
 var menu       = new Menu();
+var play       = new SoundManager();
 
 //Bind window resize events
 window.onresize = function(event) { layout.onResize(); };

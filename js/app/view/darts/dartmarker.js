@@ -32,6 +32,7 @@ DartMarker.prototype.move = function(label, pos) {
 
 DartMarker.prototype.place = function(label) {
     this.locBox.hide();
+    play.randomDartSound();
     //this.recycleButton.show();
 }
 
