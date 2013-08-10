@@ -20,6 +20,7 @@ DartMarker.prototype.init = function(label, pos) {
     this.elem.addEventListener('touchstart', function(e) { that.touchstart(e); } );
     //this.elem.addEventListener('touchend', function(e) { return; } );
     //this.elem.addEventListener('touchmove', function(e) { return; } );
+    this.locBox.setText(this.label);
 }
 
 DartMarker.prototype.move = function(label, pos) {
