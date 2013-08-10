@@ -2,9 +2,16 @@
     font-family: MrChalk;
     font-size: 3mm;
     font-weight: normal;
-    background-color: #020800;
+    /*background-color: #020800;*/
+    background-image: url('../img/chalk-board.png');
+    background-size: 100% 100%;
     color: white;
     position: absolute;
+    box-shadow: 5px 5px 7px #000000;
+}
+
+.chalk-board-header {
+    height: 0px;
 }
 
 .chalk-board-score {

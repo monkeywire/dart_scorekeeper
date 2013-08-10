@@ -25,9 +25,11 @@ Layout.prototype.onResize = function() {
         var dartBoardLeft = width * (1/10);
 
         var chalkBoardWidth = width * (3/10);
-        var chalkBoardHeight = height - (dartBoardHeight + (height * (2/10)) + 30);
+        //var chalkBoardHeight = height - (dartBoardHeight + (height * (2/10)) + 30);
+        var chalkBoardHeight = dartBoardHeight;
         var chalkBoardLeft = dartBoardLeft + dartBoardWidth + (width * (1/10));
-        var chalkBoardTop = dartBoardTop + (dartBoardHeight * (2/10));
+        //var chalkBoardTop = dartBoardTop + (dartBoardHeight * (2/10));
+        var chalkBoardTop = dartBoardTop;
 
         var menuWidth = dartBoardWidth * (7/10);
         var menuHeight = menuWidth;
@@ -40,7 +42,7 @@ Layout.prototype.onResize = function() {
         var dartBoardTop = height * (1/10);
 
         var chalkBoardWidth = width * (8/10);
-        var chalkBoardHeight = height - (dartBoardHeight + (height * (2/10)) + 30);
+        var chalkBoardHeight = Math.max(500, height - (dartBoardHeight + (height * (1/10)) + 30));
         var chalkBoardLeft = width * (1/10);
         var chalkBoardTop = dartBoardTop + dartBoardHeight + (height * (1/20));
 
