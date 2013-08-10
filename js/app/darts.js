@@ -17,4 +17,21 @@ Darts.prototype.moveLastDart = function(label, value, pos) {
 Darts.prototype.placeLastDart = function(label, value) {
     this.darts.last().marker.place(label);
     this.darts.last().value = value;
+
+    return this.darts.length == 3;
+}
+
+Darts.prototype.removeAllDarts = function() {
+    this.darts.forEach(function(dart) {
+        dart.marker.remove();
+    });
+    this.darts = new Array();
+}
+
+Darts.prototype.allDarts = function() {
+    var rValue = Array();
+    this.darts.forEach(function(dart) {
+        rValue.push({label: dart.marker.label, value: dart.value});
+    });
+    return rValue;
 }

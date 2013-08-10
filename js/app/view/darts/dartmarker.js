@@ -34,6 +34,10 @@ DartMarker.prototype.place = function(label) {
     //this.recycleButton.show();
 }
 
+DartMarker.prototype.remove = function() {
+    this.elem.remove();
+}
+
 DartMarker.prototype.setPos = function(label, pos) {
     this.label = label;
     pos.x = pos.x - this.board.style.left.replace('px', '');

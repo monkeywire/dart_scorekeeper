@@ -8,6 +8,7 @@ Dartboard = function() {
     this.board = document.getElementById('dart-board');
     this.darts = new Darts();
     this.loc = new DartboardLocation();
+    this.endTurnButton = new EndTurnButton();
     this.init();
 }
 
@@ -25,7 +26,9 @@ Dartboard.prototype.touchstart = function(event) {
 
 Dartboard.prototype.touchend = function(event) {
     this.updateLocation(event);
-    this.darts.placeLastDart(this.loc.label, this.loc.value, this.loc.pos);
+    if(this.darts.placeLastDart(this.loc.label, this.loc.value, this.loc.pos))
+        this.endTurnButton.show();
+
 }
 
 Dartboard.prototype.touchmove = function(event) {
@@ -41,5 +44,13 @@ Dartboard.prototype.updateLocation = function(event) {
 Dartboard.prototype.boardLocationCallback = function(label, value) {
     this.loc.label = label;
     this.loc.value = value;
+}
+
+Dartboard.prototype.endTurn = function() {
+    this.darts.allDarts().forEach(function(dart) {
+        game.addDart(dart.label, dart.value);
+    });
+    this.darts.removeAllDarts();
+    this.endTurnButton.hide();
 }
 
