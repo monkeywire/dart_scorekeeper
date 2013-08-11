@@ -1,6 +1,6 @@
 EndTurnButton = function() {
     this.elem = document.getElementById('end-turn-button');
-    this.elem.setAttribute('onClick', 'animate.endTurnClick(); dartboard.endTurn();');
+    this.elem.setAttribute('ontouchend', 'animate.endTurnClick(); dartboard.endTurn();');
 }
 
 EndTurnButton.prototype.show = function() {

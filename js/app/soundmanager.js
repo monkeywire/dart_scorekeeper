@@ -1,3 +1,6 @@
+//TODO Fix audio in soundmanager for android/phonegap
+//see stackoverflow post #10556437
+//see phonegap plugin for low latency audio in phonegap.
 SoundManager = function(path) {
     this.dartHits = new Array(new Audio('mp3/dart-hit-1.mp3'),
                               new Audio('mp3/dart-hit-2.mp3'),

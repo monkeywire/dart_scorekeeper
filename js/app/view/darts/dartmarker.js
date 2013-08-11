@@ -37,7 +37,8 @@ DartMarker.prototype.place = function(label) {
 }
 
 DartMarker.prototype.remove = function() {
-    this.elem.remove();
+    //use this instead of .remove for compatibility to mobile android
+    this.elem.parentNode.removeChild(this.elem);
 }
 
 DartMarker.prototype.setPos = function(label, pos) {
@@ -53,7 +54,9 @@ DartMarker.prototype.setPos = function(label, pos) {
 }*/
 
 DartMarker.prototype.touchstart = function(event) {
+    //Make sure he dartboard does not take over here.
     event.stopPropagation();
+    if(navigator.userAgent.match(/Android/i)) { event.preventDefault(); };
     this.locBox.show();
     return;
 }

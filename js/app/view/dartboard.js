@@ -20,15 +20,14 @@ Dartboard.prototype.init = function() {
 }
 
 Dartboard.prototype.touchstart = function(event) {
+    if(navigator.userAgent.match(/Android/i)) { event.preventDefault(); };
     this.updateLocation(event);
     this.darts.add(this.loc.label, this.loc.value, this.loc.pos);
 }
 
 Dartboard.prototype.touchend = function(event) {
     this.updateLocation(event);
-    if(this.darts.placeLastDart(this.loc.label, this.loc.value, this.loc.pos))
-        this.endTurnButton.show();
-
+    this.darts.placeLastDart(this.loc.label, this.loc.value, this.loc.pos);
 }
 
 Dartboard.prototype.touchmove = function(event) {

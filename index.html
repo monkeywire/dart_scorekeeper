@@ -26,7 +26,7 @@
         <![endif]-->
         <header>
             Dart Score Keeper beta
-            <img id="menu-button" onclick="menu.toggleMenu();" src="./img/menu_icon.png" align="right"/>
+            <img id="menu-button" ontouchend="menu.toggleMenu();" src="./img/menu_icon.png" align="right"/>
         </header>
 
         <div id="container">
@@ -163,26 +163,28 @@
             <div id="menu">
                 <div id="menu-text-space"></div>
                 <h1>Menu</h1>
-                <div onclick="newGame();">New Game</div>
-                <div onclick="layout.toggleMenu();">Resume Game</div>
+                <div ontouchend="newGame();">New Game</div>
+                <div ontouchend="menu.toggleMenu();">Resume Game</div>
             </div>
 
         </div> <!-- container -->
 
 
+        <!-- Third Paty Libraries -->
+        <script src="./js/vendor/gsap/TweenLite.min.js"></script>
+        <script src="./js/vendor/gsap/CSSPlugin.min.js"></script>
+        <script src="./js/vendor/gsap/TimelineLite.min.js"></script>
+
+
         <!-- Game Engine Files -->
         <script src="./js/vendor/simple-js-darts/js_extensions.js"></script>
-        <script src="./js/vendor/simple-js-darts/board.js"></script>
+        <!--script src="./js/vendor/simple-js-darts/board.js"></script-->
         <script src="./js/vendor/simple-js-darts/dart.js"></script>
         <script src="./js/vendor/simple-js-darts/round.js"></script>
         <script src="./js/vendor/simple-js-darts/player.js"></script>
         <script src="./js/vendor/simple-js-darts/game.js"></script>
         <script src="./js/vendor/simple-js-darts/game_01.js"></script>
 
-        <!-- Third Paty Libraries -->
-        <script src="./js/vendor/gsap/TweenLite.min.js"></script>
-        <script src="./js/vendor/gsap/CSSPlugin.min.js"></script>
-        <script src="./js/vendor/gsap/TimeLineLite.min.js"></script>
 
         <!-- GUI Source Files -->
         <script src="js/app/extensions.js"></script>
@@ -193,7 +195,7 @@
         <script src="js/app/view/endturnbutton.js"></script>
         <script src="js/app/darts.js"></script>
         <script src="js/app/view/darts/dartlocationbox.js"></script>
-        <script src="js/app/view/darts/recyclebutton.js"></script>
+        <!--script src="js/app/view/darts/recyclebutton.js"></script-->
         <script src="js/app/view/darts/dartmarker.js"></script>
         <script src="js/app/view/chalkboard.js"></script>
         <script src="js/app/view/menu/menu.js"></script>
