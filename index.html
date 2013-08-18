@@ -10,202 +10,178 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/dartboard.css">
-        <link rel="stylesheet" href="css/darts.css">
-        <link rel="stylesheet" href="css/menu.css">
-        <link rel="stylesheet" href="css/chalkboard.css">
-        <link rel="stylesheet" type="text/css" href="./fonts/dart-trainer-fonts.css">
+        <link rel="stylesheet" href="assets/css/normalize.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
 
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <!-- Skin Css Files -->
+        <link id="skin-css" rel="stylesheet" href="assets/skins/default/default.css">
+        <link rel="stylesheet" href="assets/skins/default/media.css">
+        <link rel="stylesheet" type="text/css" href="assets/skins/default/fonts/dart-trainer-fonts.css">
+
+        <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-        <header>
-            Dart Score Keeper beta
-            <img id="menu-button" ontouchend="menu.toggleMenu();" src="./img/menu_icon.png" align="right"/>
-        </header>
 
+        <header>Dart Scorekeeper Beta v.2</header>
         <div id="container">
 
-            <div id="end-turn-button"></div>
-
             <div id="dart-board">
-                <!-- Dart Board Map -->
-                <!-- TODO: Dartboard's for different size displays, with maps -->
-                <img src="./img/basic_dart_board.png" width="100%" height="100%" border="0" usemap="#map"/>
-
+                <img id="dart-board-img" src="assets/skins/default/img/dart-board.png" border="0" usemap="#map" width="100%" height="100%"/>
                 <map id="dart-board-map" name="map">
-                <!-- #$-:Image map file created by GIMP Image Map plug-in -->
-                <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
-                <!-- #$-:Please do not edit lines starting with "#$" -->
-                <!-- #$VERSION:2.3 -->
-                <!-- #$AUTHOR:roger   -->
-                    <area shape="poly" coords="334,77,333,89,296,86,267,89,264,77,298,74" onmouseover="dartboard.boardLocationCallback(&apos;d20&apos;, 40, true);"  nohref="nohref" />
-                    <area shape="poly" coords="267,89,297,87,333,89,321,160,298,158,278,160" onmouseover="dartboard.boardLocationCallback(&apos;20&apos;, 20);"  nohref="nohref" />
-                    <area shape="poly" coords="278,160,298,159,321,161,320,172,297,171,279,172" onmouseover="dartboard.boardLocationCallback(&apos;t20&apos;, 60);"  nohref="nohref" />
-                    <area shape="poly" coords="280,172,320,172,303,278,297,278" onmouseover="dartboard.boardLocationCallback(&apos;20&apos;, 20);"  nohref="nohref" />
-                    <area shape="poly" coords="197,99,231,86,264,77,267,89,235,96,202,110" onmouseover="dartboard.boardLocationCallback(&apos;d5&apos;, 10, true);"  nohref="nohref" />
-                    <area shape="poly" coords="202,110,234,97,267,89,278,160,253,167,236,174" onmouseover="dartboard.boardLocationCallback(&apos;5&apos;, 5);"  nohref="nohref" />
-                    <area shape="poly" coords="235,174,254,167,278,161,279,172,259,176,240,184" onmouseover="dartboard.boardLocationCallback(&apos;t5&apos;, 15);"  nohref="nohref" />
-                    <area shape="poly" coords="240,185,259,176,279,172,297,278,289,281" onmouseover="dartboard.boardLocationCallback(&apos;5&apos;, 5);"  nohref="nohref" />
-                    <area shape="poly" coords="140,140,165,120,196,100,202,111,175,127,149,149" onmouseover="dartboard.boardLocationCallback(&apos;d12&apos;, 24, true);"  nohref="nohref" />
-                    <area shape="poly" coords="149,149,174,128,202,111,236,175,214,186,201,200" onmouseover="dartboard.boardLocationCallback(&apos;`12&apos;, 12);"  nohref="nohref" />
-                    <area shape="poly" coords="200,199,216,187,236,174,241,185,222,196,207,208" onmouseover="dartboard.boardLocationCallback(&apos;t12&apos;, 36);"  nohref="nohref" />
-                    <area shape="poly" coords="209,208,222,196,240,186,289,281,285,284" onmouseover="dartboard.boardLocationCallback(&apos;12&apos;, 12);"  nohref="nohref" />
-                    <area shape="poly" coords="140,140,149,149,126,175,109,203,99,198,118,167" onmouseover="dartboard.boardLocationCallback(&apos;d9&apos;, 18, true);"  nohref="nohref" />
-                    <area shape="poly" coords="110,203,126,175,149,149,200,200,184,218,174,236" onmouseover="dartboard.boardLocationCallback(&apos;9&apos;, 9);"  nohref="nohref" />
-                    <area shape="poly" coords="184,242,193,225,207,208,200,200,184,219,174,236" onmouseover="dartboard.boardLocationCallback(&apos;t9&apos;, 27);"  nohref="nohref" />
-                    <area shape="poly" coords="185,242,194,224,208,208,285,284,280,291" onmouseover="dartboard.boardLocationCallback(&apos;9&apos;, 9);"  nohref="nohref" />
-                    <area shape="poly" coords="99,197,86,229,77,265,90,266,97,235,110,203" onmouseover="dartboard.boardLocationCallback(&apos;d14&apos;, 28, true);"  nohref="nohref" />
-                    <area shape="poly" coords="89,265,160,277,164,257,174,235,110,204,98,229" onmouseover="dartboard.boardLocationCallback(&apos;14&apos;, 14);"  nohref="nohref" />
-                    <area shape="poly" coords="160,277,172,279,183,242,175,236,166,255" onmouseover="dartboard.boardLocationCallback(&apos;t14&apos;, 3 * 14);"  nohref="nohref" />
-                    <area shape="poly" coords="184,242,280,291,279,296,172,279,177,260" onmouseover="dartboard.boardLocationCallback(&apos;14&apos;, 14);"  nohref="nohref" />
-                    <area shape="poly" coords="77,266,75,299,77,335,89,333,87,303,88,267" onmouseover="dartboard.boardLocationCallback(&apos;d11&apos;,22, true);"  nohref="nohref" />
-                    <area shape="poly" coords="89,333,87,295,89,266,161,278,159,300,161,322" onmouseover="dartboard.boardLocationCallback(&apos;11&apos;, 11);"  nohref="nohref" />
-                    <area shape="poly" coords="160,321,172,320,170,300,171,279,160,278,159,300" onmouseover="dartboard.boardLocationCallback(&apos;t11&apos;, 33);"  nohref="nohref" />
-                    <area shape="poly" coords="172,321,170,299,171,278,279,296,279,304" onmouseover="dartboard.boardLocationCallback(&apos;11&apos;, 11);"  nohref="nohref" />
-                    <area shape="poly" coords="77,336,90,333,97,365,109,396,99,402,85,370" onmouseover="dartboard.boardLocationCallback(&apos;d8&apos;, 16, true);"  nohref="nohref" />
-                    <area shape="poly" coords="109,396,173,364,165,344,160,322,89,333,96,365" onmouseover="dartboard.boardLocationCallback(&apos;8&apos;, 8);"  nohref="nohref" />
-                    <area shape="poly" coords="173,363,184,358,176,341,172,321,160,321,164,341" onmouseover="dartboard.boardLocationCallback(&apos;t8&apos;, 8 * 3);"  nohref="nohref" />
-                    <area shape="poly" coords="184,357,177,338,173,320,279,303,280,309" onmouseover="dartboard.boardLocationCallback(&apos;8&apos;, 8);"  nohref="nohref" />
-                    <area shape="poly" coords="99,403,116,431,140,459,149,451,129,428,109,396" onmouseover="dartboard.boardLocationCallback(&apos;d16&apos;, 2 * 16, true);"  nohref="nohref" />
-                    <area shape="poly" coords="149,451,201,400,185,382,173,363,110,396,125,423" onmouseover="dartboard.boardLocationCallback(&apos;16&apos;, 16);"  nohref="nohref" />
-                    <area shape="poly" coords="200,400,209,391,192,373,184,358,174,364,184,380" onmouseover="dartboard.boardLocationCallback(&apos;t16&apos;, 3 * 16);"  nohref="nohref" />
-                    <area shape="poly" coords="208,392,285,316,280,309,184,359,194,375" onmouseover="dartboard.boardLocationCallback(&apos;16&apos;, 16);"  nohref="nohref" />
-                    <area shape="poly" coords="198,501,202,490,175,473,149,451,141,459,164,481" onmouseover="dartboard.boardLocationCallback(&apos;d7&apos;, 14, true);"  nohref="nohref" />
-                    <area shape="poly" coords="202,489,172,469,150,450,200,401,213,412,235,427" onmouseover="dartboard.boardLocationCallback(&apos;7&apos;,  7);"  nohref="nohref" />
-                    <area shape="poly" coords="235,425,241,415,223,403,209,392,200,401,214,413" onmouseover="dartboard.boardLocationCallback(&apos;t7&apos;, 21);"  nohref="nohref" />
-                    <area shape="poly" coords="240,415,289,320,285,315,209,391,221,403" onmouseover="dartboard.boardLocationCallback(&apos;7&apos;, 7);"  nohref="nohref" />
-                    <area shape="poly" coords="265,523,267,510,231,502,202,491,198,501,228,514" onmouseover="dartboard.boardLocationCallback(&apos;d19&apos;, 19 * 2, true);"  nohref="nohref" />
-                    <area shape="poly" coords="266,510,234,503,202,490,236,424,255,434,277,440" onmouseover="dartboard.boardLocationCallback(&apos;19&apos;, 19);"  nohref="nohref" />
-                    <area shape="poly" coords="277,439,253,433,236,425,242,415,258,423,279,428" onmouseover="dartboard.boardLocationCallback(&apos;t19&apos;, 19 * 3);"  nohref="nohref" />
-                    <area shape="poly" coords="280,427,258,423,241,415,290,319,297,321" onmouseover="dartboard.boardLocationCallback(&apos;19&apos;, 19);"  nohref="nohref" />
-                    <area shape="poly" coords="265,523,266,510,299,513,333,511,335,522,298,525" onmouseover="dartboard.boardLocationCallback(&apos;d3&apos;, 6, true);"  nohref="nohref" />
-                    <area shape="poly" coords="267,510,278,440,299,442,322,440,332,511,298,513,299,513,288,512" onmouseover="dartboard.boardLocationCallback(&apos;3&apos;, 3);"  nohref="nohref" />
-                    <area shape="poly" coords="321,439,300,441,278,439,280,428,297,429,320,428" onmouseover="dartboard.boardLocationCallback(&apos;t3&apos;, 9);"  nohref="nohref" />
-                    <area shape="poly" coords="280,427,296,322,303,322,319,428,299,429" onmouseover="dartboard.boardLocationCallback(&apos;3&apos;, 3);"  nohref="nohref" />
-                    <area shape="poly" coords="335,523,372,514,402,501,396,489,365,503,333,511" onmouseover="dartboard.boardLocationCallback(&apos;d17&apos;, 17 * 2, true);"  nohref="nohref" />
-                    <area shape="poly" coords="332,510,366,503,396,489,364,426,342,435,322,440" onmouseover="dartboard.boardLocationCallback(&apos;17&apos;, 17);"  nohref="nohref" />
-                    <area shape="poly" coords="321,438,344,434,365,426,359,415,340,423,320,428" onmouseover="dartboard.boardLocationCallback(&apos;t17&apos;, 17 * 3);"  nohref="nohref" />
-                    <area shape="poly" coords="320,427,339,423,359,415,310,319,303,321" onmouseover="dartboard.boardLocationCallback(&apos;17&apos;, 17);"  nohref="nohref" />
-                    <area shape="poly" coords="402,500,435,480,458,458,450,450,425,472,397,489" onmouseover="dartboard.boardLocationCallback(&apos;d2&apos;, 4, true);"  nohref="nohref" />
-                    <area shape="poly" coords="396,488,423,474,450,450,400,399,381,416,364,425" onmouseover="dartboard.boardLocationCallback(&apos;2&apos;, 2);"  nohref="nohref" />
-                    <area shape="poly" coords="363,425,382,415,400,400,391,392,375,404,358,415" onmouseover="dartboard.boardLocationCallback(&apos;t2&apos;, 6);"  nohref="nohref" />
-                    <area shape="poly" coords="358,414,375,405,391,392,315,317,311,320" onmouseover="dartboard.boardLocationCallback(&apos;2&apos;, 2);"  nohref="nohref" />
-                    <area shape="poly" coords="459,458,479,435,500,403,490,397,473,424,450,451" onmouseover="dartboard.boardLocationCallback(&apos;d15&apos;, 30, true);"  nohref="nohref" />
-                    <area shape="poly" coords="450,451,473,424,490,397,426,364,415,382,400,400" onmouseover="dartboard.boardLocationCallback(&apos;15&apos;, 15);"  nohref="nohref" />
-                    <area shape="poly" coords="399,400,391,391,405,376,415,359,426,364,414,383" onmouseover="dartboard.boardLocationCallback(&apos;t15&apos;, 45);"  nohref="nohref" />
-                    <area shape="poly" coords="391,392,406,375,415,358,320,309,315,317" onmouseover="dartboard.boardLocationCallback(&apos;15&apos;, 15);"  nohref="nohref" />
-                    <area shape="poly" coords="501,402,513,373,522,335,511,333,502,364,490,396" onmouseover="dartboard.boardLocationCallback(&apos;d10&apos;, 20, true);"  nohref="nohref" />
-                    <area shape="poly" coords="490,395,502,365,510,334,440,322,435,343,426,363" onmouseover="dartboard.boardLocationCallback(&apos;10&apos;, 10);"  nohref="nohref" />
-                    <area shape="poly" coords="426,363,434,346,439,321,427,321,422,341,415,358" onmouseover="dartboard.boardLocationCallback(&apos;t10&apos;, 30);"  nohref="nohref" />
-                    <area shape="poly" coords="415,358,423,340,427,320,321,304,320,310" onmouseover="dartboard.boardLocationCallback(&apos;10&apos;, 10);"  nohref="nohref" />
-                    <area shape="poly" coords="522,335,510,333,513,297,510,266,522,265,524,303" onmouseover="dartboard.boardLocationCallback(&apos;d6&apos;, 12, true);"  nohref="nohref" />
-                    <area shape="poly" coords="511,334,513,297,510,266,439,277,441,305,440,322" onmouseover="dartboard.boardLocationCallback(&apos;6&apos;, 6);"  nohref="nohref" />
-                    <area shape="poly" coords="440,322,440,299,440,277,428,279,429,299,428,320" onmouseover="dartboard.boardLocationCallback(&apos;t6&apos;, 18);"  nohref="nohref" />
-                    <area shape="poly" coords="427,320,429,299,427,279,321,296,321,304" onmouseover="dartboard.boardLocationCallback(&apos;6&apos;, 6);"  nohref="nohref" />
-                    <area shape="poly" coords="500,198,515,233,522,265,510,267,503,236,489,202" onmouseover="dartboard.boardLocationCallback(&apos;d13&apos;, 26, true);"  nohref="nohref" />
-                    <area shape="poly" coords="489,204,502,233,510,265,439,277,435,255,426,236" onmouseover="dartboard.boardLocationCallback(&apos;13&apos;, 13);"  nohref="nohref" />
-                    <area shape="poly" coords="439,277,427,279,423,261,415,241,425,236,434,256" onmouseover="dartboard.boardLocationCallback(&apos;t13&apos;, 39);"  nohref="nohref" />
-                    <area shape="poly" coords="428,279,423,261,415,242,319,290,321,296" onmouseover="dartboard.boardLocationCallback(&apos;13&apos;, 13);"  nohref="nohref" />
-                    <area shape="poly" coords="500,198,484,169,459,141,450,149,470,171,490,204" onmouseover="dartboard.boardLocationCallback(&apos;d4&apos;, 8, true);"  nohref="nohref" />
-                    <area shape="poly" coords="489,203,474,175,450,149,399,200,414,217,426,236" onmouseover="dartboard.boardLocationCallback(&apos;4&apos;, 4);"  nohref="nohref" />
-                    <area shape="poly" coords="426,235,415,241,405,223,391,208,400,201,413,217,414,217,417,222" onmouseover="dartboard.boardLocationCallback(&apos;t4&apos;, 12);"  nohref="nohref" />
-                    <area shape="poly" coords="415,241,405,224,391,207,314,285,320,290" onmouseover="dartboard.boardLocationCallback(&apos;4&apos;, 4);"  nohref="nohref" />
-                    <area shape="poly" coords="459,140,433,118,402,100,397,110,422,125,450,149" onmouseover="dartboard.boardLocationCallback(&apos;d18&apos;, 18 * 2, true);"  nohref="nohref" />
-                    <area shape="poly" coords="449,149,423,126,396,110,365,174,381,183,400,199" onmouseover="dartboard.boardLocationCallback(&apos;18&apos;, 18);"  nohref="nohref" />
-                    <area shape="poly" coords="399,200,389,208,374,194,359,185,364,174,382,185" onmouseover="dartboard.boardLocationCallback(&apos;t18&apos;, 18 * 3);"  nohref="nohref" />
-                    <area shape="poly" coords="390,208,375,194,359,184,310,280,315,284" onmouseover="dartboard.boardLocationCallback(&apos;18&apos;, 18);"  nohref="nohref" />
-                    <area shape="poly" coords="401,99,369,85,334,78,333,89,359,95,397,110" onmouseover="dartboard.boardLocationCallback(&apos;d1&apos;, 2, true);"  nohref="nohref" />
-                    <area shape="poly" coords="397,110,364,96,333,90,321,160,344,165,365,174" onmouseover="dartboard.boardLocationCallback(&apos;1&apos;, 1);"  nohref="nohref" />
-                    <area shape="poly" coords="363,174,342,165,321,160,320,172,337,175,359,184" onmouseover="dartboard.boardLocationCallback(&apos;t1&apos;, 3);"  nohref="nohref" />
-                    <area shape="poly" coords="359,184,337,175,320,173,303,279,311,280" onmouseover="dartboard.boardLocationCallback(&apos;1&apos;, 1);"  nohref="nohref" />
-                    <area shape="circle" coords="300,300,21" onmouseover="dartboard.boardLocationCallback(&apos;iris&apos;, 25);"  nohref="nohref" />
-                    <area shape="circle" coords="300,300,9" onmouseover="dartboard.boardLocationCallback(&apos;bull&apos;, 50, true);"  nohref="nohref" />
-                    <area shape="circle" coords="299,300,303" onmouseover="dartboard.boardLocationCallback(&apos;miss&apos;, 0);"  nohref="nohref" />
+                    <area shape="poly" coords="334,77,333,89,296,86,267,89,264,77,298,74" onclick="app.dartBoard.onClick(event, &apos;d20&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="267,89,297,87,333,89,321,160,298,158,278,160" onclick="app.dartBoard.onClick(event, &apos;20&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="278,160,298,159,321,161,320,172,297,171,279,172" onclick="app.dartBoard.onClick(event, &apos;t20&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="280,172,320,172,303,278,297,278" onclick="app.dartBoard.onClick(event, &apos;20&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="197,99,231,86,264,77,267,89,235,96,202,110" onclick="app.dartBoard.onClick(event, &apos;d5&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="202,110,234,97,267,89,278,160,253,167,236,174" onclick="app.dartBoard.onClick(event, &apos;5&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="235,174,254,167,278,161,279,172,259,176,240,184" onclick="app.dartBoard.onClick(event, &apos;t5&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="240,185,259,176,279,172,297,278,289,281" onclick="app.dartBoard.onClick(event, &apos;5&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="140,140,165,120,196,100,202,111,175,127,149,149" onclick="app.dartBoard.onClick(event, &apos;d12&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="149,149,174,128,202,111,236,175,214,186,201,200" onclick="app.dartBoard.onClick(event, &apos;`12&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="200,199,216,187,236,174,241,185,222,196,207,208" onclick="app.dartBoard.onClick(event, &apos;t12&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="209,208,222,196,240,186,289,281,285,284" onclick="app.dartBoard.onClick(event, &apos;12&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="140,140,149,149,126,175,109,203,99,198,118,167" onclick="app.dartBoard.onClick(event, &apos;d9&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="110,203,126,175,149,149,200,200,184,218,174,236" onclick="app.dartBoard.onClick(event, &apos;9&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="184,242,193,225,207,208,200,200,184,219,174,236" onclick="app.dartBoard.onClick(event, &apos;t9&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="185,242,194,224,208,208,285,284,280,291" onclick="app.dartBoard.onClick(event, &apos;9&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="99,197,86,229,77,265,90,266,97,235,110,203" onclick="app.dartBoard.onClick(event, &apos;d14&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="89,265,160,277,164,257,174,235,110,204,98,229" onclick="app.dartBoard.onClick(event, &apos;14&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="160,277,172,279,183,242,175,236,166,255" onclick="app.dartBoard.onClick(event, &apos;t14&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="184,242,280,291,279,296,172,279,177,260" onclick="app.dartBoard.onClick(event, &apos;14&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="77,266,75,299,77,335,89,333,87,303,88,267" onclick="app.dartBoard.onClick(event, &apos;d11&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="89,333,87,295,89,266,161,278,159,300,161,322" onclick="app.dartBoard.onClick(event, &apos;11&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="160,321,172,320,170,300,171,279,160,278,159,300" onclick="app.dartBoard.onClick(event, &apos;t11&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="172,321,170,299,171,278,279,296,279,304" onclick="app.dartBoard.onClick(event, &apos;11&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="77,336,90,333,97,365,109,396,99,402,85,370" onclick="app.dartBoard.onClick(event, &apos;d8&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="109,396,173,364,165,344,160,322,89,333,96,365" onclick="app.dartBoard.onClick(event, &apos;8&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="173,363,184,358,176,341,172,321,160,321,164,341" onclick="app.dartBoard.onClick(event, &apos;t8&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="184,357,177,338,173,320,279,303,280,309" onclick="app.dartBoard.onClick(event, &apos;8&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="99,403,116,431,140,459,149,451,129,428,109,396" onclick="app.dartBoard.onClick(event, &apos;d16&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="149,451,201,400,185,382,173,363,110,396,125,423" onclick="app.dartBoard.onClick(event, &apos;16&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="200,400,209,391,192,373,184,358,174,364,184,380" onclick="app.dartBoard.onClick(event, &apos;t16&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="208,392,285,316,280,309,184,359,194,375" onclick="app.dartBoard.onClick(event, &apos;16&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="198,501,202,490,175,473,149,451,141,459,164,481" onclick="app.dartBoard.onClick(event, &apos;d7&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="202,489,172,469,150,450,200,401,213,412,235,427" onclick="app.dartBoard.onClick(event, &apos;7&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="235,425,241,415,223,403,209,392,200,401,214,413" onclick="app.dartBoard.onClick(event, &apos;t7&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="240,415,289,320,285,315,209,391,221,403" onclick="app.dartBoard.onClick(event, &apos;7&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="265,523,267,510,231,502,202,491,198,501,228,514" onclick="app.dartBoard.onClick(event, &apos;d19&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="266,510,234,503,202,490,236,424,255,434,277,440" onclick="app.dartBoard.onClick(event, &apos;19&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="277,439,253,433,236,425,242,415,258,423,279,428" onclick="app.dartBoard.onClick(event, &apos;t19&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="280,427,258,423,241,415,290,319,297,321" onclick="app.dartBoard.onClick(event, &apos;19&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="265,523,266,510,299,513,333,511,335,522,298,525" onclick="app.dartBoard.onClick(event, &apos;d3&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="267,510,278,440,299,442,322,440,332,511,298,513,299,513,288,512" onclick="app.dartBoard.onClick(event, &apos;3&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="321,439,300,441,278,439,280,428,297,429,320,428" onclick="app.dartBoard.onClick(event, &apos;t3&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="280,427,296,322,303,322,319,428,299,429" onclick="app.dartBoard.onClick(event, &apos;3&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="335,523,372,514,402,501,396,489,365,503,333,511" onclick="app.dartBoard.onClick(event, &apos;d17&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="332,510,366,503,396,489,364,426,342,435,322,440" onclick="app.dartBoard.onClick(event, &apos;17&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="321,438,344,434,365,426,359,415,340,423,320,428" onclick="app.dartBoard.onClick(event, &apos;t17&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="320,427,339,423,359,415,310,319,303,321" onclick="app.dartBoard.onClick(event, &apos;17&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="402,500,435,480,458,458,450,450,425,472,397,489" onclick="app.dartBoard.onClick(event, &apos;d2&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="396,488,423,474,450,450,400,399,381,416,364,425" onclick="app.dartBoard.onClick(event, &apos;2&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="363,425,382,415,400,400,391,392,375,404,358,415" onclick="app.dartBoard.onClick(event, &apos;t2&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="358,414,375,405,391,392,315,317,311,320" onclick="app.dartBoard.onClick(event, &apos;2&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="459,458,479,435,500,403,490,397,473,424,450,451" onclick="app.dartBoard.onClick(event, &apos;d15&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="450,451,473,424,490,397,426,364,415,382,400,400" onclick="app.dartBoard.onClick(event, &apos;15&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="399,400,391,391,405,376,415,359,426,364,414,383" onclick="app.dartBoard.onClick(event, &apos;t15&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="391,392,406,375,415,358,320,309,315,317" onclick="app.dartBoard.onClick(event, &apos;15&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="501,402,513,373,522,335,511,333,502,364,490,396" onclick="app.dartBoard.onClick(event, &apos;d10&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="490,395,502,365,510,334,440,322,435,343,426,363" onclick="app.dartBoard.onClick(event, &apos;10&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="426,363,434,346,439,321,427,321,422,341,415,358" onclick="app.dartBoard.onClick(event, &apos;t10&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="415,358,423,340,427,320,321,304,320,310" onclick="app.dartBoard.onClick(event, &apos;10&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="522,335,510,333,513,297,510,266,522,265,524,303" onclick="app.dartBoard.onClick(event, &apos;d6&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="511,334,513,297,510,266,439,277,441,305,440,322" onclick="app.dartBoard.onClick(event, &apos;6&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="440,322,440,299,440,277,428,279,429,299,428,320" onclick="app.dartBoard.onClick(event, &apos;t6&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="427,320,429,299,427,279,321,296,321,304" onclick="app.dartBoard.onClick(event, &apos;6&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="500,198,515,233,522,265,510,267,503,236,489,202" onclick="app.dartBoard.onClick(event, &apos;d13&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="489,204,502,233,510,265,439,277,435,255,426,236" onclick="app.dartBoard.onClick(event, &apos;13&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="439,277,427,279,423,261,415,241,425,236,434,256" onclick="app.dartBoard.onClick(event, &apos;t13&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="428,279,423,261,415,242,319,290,321,296" onclick="app.dartBoard.onClick(event, &apos;13&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="500,198,484,169,459,141,450,149,470,171,490,204" onclick="app.dartBoard.onClick(event, &apos;d4&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="489,203,474,175,450,149,399,200,414,217,426,236" onclick="app.dartBoard.onClick(event, &apos;4&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="426,235,415,241,405,223,391,208,400,201,413,217,414,217,417,222" onclick="app.dartBoard.onClick(event, &apos;t4&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="415,241,405,224,391,207,314,285,320,290" onclick="app.dartBoard.onClick(event, &apos;4&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="459,140,433,118,402,100,397,110,422,125,450,149" onclick="app.dartBoard.onClick(event, &apos;d18&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="449,149,423,126,396,110,365,174,381,183,400,199" onclick="app.dartBoard.onClick(event, &apos;18&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="399,200,389,208,374,194,359,185,364,174,382,185" onclick="app.dartBoard.onClick(event, &apos;t18&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="390,208,375,194,359,184,310,280,315,284" onclick="app.dartBoard.onClick(event, &apos;18&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="401,99,369,85,334,78,333,89,359,95,397,110" onclick="app.dartBoard.onClick(event, &apos;d1&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="397,110,364,96,333,90,321,160,344,165,365,174" onclick="app.dartBoard.onClick(event, &apos;1&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="363,174,342,165,321,160,320,172,337,175,359,184" onclick="app.dartBoard.onClick(event, &apos;t1&apos;);"  nohref="nohref" />
+                    <area shape="poly" coords="359,184,337,175,320,173,303,279,311,280" onclick="app.dartBoard.onClick(event, &apos;1&apos;);"  nohref="nohref" />
+                    <area shape="circle" coords="300,300,21" onclick="app.dartBoard.onClick(event, &apos;iris&apos;);"  nohref="nohref" />
+                    <area shape="circle" coords="300,300,9" onclick="app.dartBoard.onClick(event, &apos;bull&apos;);"  nohref="nohref" />
+                    <area shape="circle" coords="299,300,303" onclick="app.dartBoard.onClick(event, &apos;miss&apos;, 0);"  nohref="nohref" />
                 </map>
+            </div> <!-- dart-board -->
 
-            </div>
+            <div id="end-turn-button"></div>
+            <div id="view-glass"><div id="view-glass-pointer"></div></div>
 
 
             <table id="chalk-board">
-                <tr class="chalk-board-header">
-                    <td>
-                        <h1 align="right"><div id="round-display">Round 1:</div></h1>
-                    </td>
-                    <td>
-                        <h1 align="left"><div id="player-turn">Player1's Turn</div></h1>
-                    </td>
-                </tr>
-                <tr  class="chalk-board-header">
-                    <td class="right-chalk-line" width="50%">
-                        <h1 align="center">Player 1</h1>
-                    </td>
-                    <td width="50%">
-                        <h1 align="center">Player 2</h1>
-                    </td>
-                </tr>
-                <tr class="top-chalk-line">
-                    <td class="right-chalk-line chalk-board-score" width="50%">
-                        <h2><div class="player-scores" id="player1-scores">301</div></h2>
-                    </td>
-                    <td class="chalk-board-score" width="50%">
-                        <h2><div class="player-scores" id="player2-scores">301</div></h2>
-                    </td>
-                </tr>
+                <thead class="chalk-board-header">
+                    <tr>
+                        <td>Round: <span data-bind="text: round"></span></td>
+                        <td>Player: <span data-bind="text: playerTurn"></span></td>
+                    </tr>
+                    <tr data-bind="foreach: playerNames">
+                        <td class="chalk-board-players" data-bind="text: $data"></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-bind="foreach: playerScores">
+                        <td class="chalk-board-score" data-bind="foreach: $data">
+                            <span data-bind="text: $data"></span><br/>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
 
 
             <div id="menu">
-                <div id="menu-text-space"></div>
-                <h1>Menu</h1>
-                <div ontouchend="newGame();">New Game</div>
-                <div ontouchend="menu.toggleMenu();">Resume Game</div>
+                <h1 class="menu-header" data-bind="text: menuTitle"></h1>
+                <div data-bind="foreach: menuItems">
+                    <h2 data-bind="text: text, click: onClick"></h2>
+                </div>
             </div>
 
-        </div> <!-- container -->
+        </div>
 
+        </div> <!--container-->
 
-        <!-- Third Paty Libraries -->
-        <script src="./js/vendor/gsap/TweenLite.min.js"></script>
-        <script src="./js/vendor/gsap/CSSPlugin.min.js"></script>
-        <script src="./js/vendor/gsap/TimelineLite.min.js"></script>
-
+        <!-- Load Vendor Scripts -->
+        <script src="assets/js/vendor/knockout-2.3.0.js"></script>
+        <script src="assets/js/vendor/gsap/TimeLineLite.min.js"></script>
+        <script src="assets/js/vendor/gsap/TweenLite.min.js"></script>
+        <script src="assets/js/vendor/gsap/CSSPlugin.min.js"></script>
 
         <!-- Game Engine Files -->
-        <script src="./js/vendor/simple-js-darts/js_extensions.js"></script>
-        <!--script src="./js/vendor/simple-js-darts/board.js"></script-->
-        <script src="./js/vendor/simple-js-darts/dart.js"></script>
-        <script src="./js/vendor/simple-js-darts/round.js"></script>
-        <script src="./js/vendor/simple-js-darts/player.js"></script>
-        <script src="./js/vendor/simple-js-darts/game.js"></script>
-        <script src="./js/vendor/simple-js-darts/game_01.js"></script>
+        <script src="assets/js/vendor/simple-js-darts/js_extensions.js"></script>
+        <script src="assets/js/vendor/simple-js-darts/dart.js"></script>
+        <script src="assets/js/vendor/simple-js-darts/round.js"></script>
+        <script src="assets/js/vendor/simple-js-darts/player.js"></script>
+        <script src="assets/js/vendor/simple-js-darts/game.js"></script>
+        <script src="assets/js/vendor/simple-js-darts/game_01.js"></script>
 
+        <!-- Load Utility Scripts -->
+        <script src="assets/js/util/array.js"></script>
+        <script src="assets/js/util/touch.js"></script>
+        <script src="assets/js/util/elements.js"></script>
+        <script src="assets/js/util/image-map.js"></script>
 
-        <!-- GUI Source Files -->
-        <script src="js/app/extensions.js"></script>
-        <script src="js/app/soundmanager.js"></script>
-        <script src="js/app/animationmanager.js"></script>
-        <script src="js/app/view/layout.js"></script>
-        <script src="js/app/view/dartboard.js"></script>
-        <script src="js/app/view/endturnbutton.js"></script>
-        <script src="js/app/darts.js"></script>
-        <script src="js/app/view/darts/dartlocationbox.js"></script>
-        <!--script src="js/app/view/darts/recyclebutton.js"></script-->
-        <script src="js/app/view/darts/dartmarker.js"></script>
-        <script src="js/app/view/chalkboard.js"></script>
-        <script src="js/app/view/menu/menu.js"></script>
-        <script src="js/app/main.js"></script>
+        <!-- Load Application Scripts -->
+        <script src="assets/js/app/end-turn-button.js"></script>
+        <script src="assets/js/app/view-glass.js"></script>
+        <script src="assets/js/app/dart-board.js"></script>
+        <script src="assets/js/app/dartpointer.js"></script>
+        <script src="assets/js/app/chalkboardViewModel.js"></script>
+        <script src="assets/js/app/menu.js"></script>
+        <script src="assets/js/app/main.js"></script>
 
-        <!--script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script-->
+        <!-- Load Skin Scripts -->
+        <script src="assets/skins/default/default.js"></script>
     </body>
 </html>

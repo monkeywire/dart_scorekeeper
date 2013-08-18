@@ -1,0 +1,106 @@
+header {
+    height: 30px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+body {
+    background-color: green;
+}
+
+#container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#dart-board {
+    position: absolute;
+}
+
+.dart {
+    background-image: url('img/dart.png');
+    background-size: 100% 100%;
+    position: absolute;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+}
+
+.dart-hover {
+    /*We have to have this otherwise the dive grabs all the click events
+    and they do not go to the dartboard to update the cursor location*/
+    pointer-events: none;
+    background-position: 2px -2px;
+}
+
+.dart-placed {
+}
+
+#view-glass {
+    position: relative;
+    background-image: url('./img/dart-board.png');
+    border-radius: 100%;
+    visibility: hidden;
+    box-shadow: 10px 10px 15px #000000;
+}
+
+#view-glass-pointer {
+    position: absolute;
+    border-radius: 100%;
+    background-color: silver;
+    width: 10%;
+    height: 10%;
+    top: 45%;
+    left: 45%;
+}
+
+#chalk-board {
+    position: absolute;
+    background-color: black;
+    box-shadow: 5px 5px 7px #000000;
+    font-family: MrChalk;
+    color: white;
+    vertical-align: top;
+    border: 8px solid brown;
+}
+
+.chalk-board-header {
+    height: 10%;
+    border-bottom: 1px solid white;
+    font-size: 1.3em;
+}
+
+.chalk-board-score {
+    vertical-align: top;
+    text-align: center;
+    border-left: 1px solid white;
+    width: 50%;
+    font-size: 1em;
+}
+
+.chalk-board-players {
+    text-align: center;
+    border-left: 1px solid white;
+}
+
+#end-turn-button {
+  position: absolute;
+  background-image: url('./img/green_check.png');
+  background-size: 100% 100%;
+  box-shadow: 10px 10px 15px #000000;
+  border-radius: 100%;
+}
+
+#menu {
+    position: absolute;
+    background-image: url('./img/post-it.png');
+    background-size: 100% 100%;
+    font-family: Leah;
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu-header {
+    margin-top: 30%
+}

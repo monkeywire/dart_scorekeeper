@@ -15,6 +15,10 @@ body {
     line-height: 1.4;
 }
 
+html, body {
+    height: 100%;
+}
+
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -59,91 +63,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-body {
-    background-color: green;
-}
-
-header {
-    background-color: black;
-    height: 30px;
-    color: white;
-}
-
-#container {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    -webkit-tap-highlight-color: transparent;
-}
-
-#end-turn-button {
-  position: absolute;
-  left: 10%;
-  top: 15%;
-  width: 10%;
-  height: 10%;
-  background-image: url('../img/green_check.png');
-  background-size: 100% 100%;
-  visibility: hidden;
-  box-shadow: 10px 10px 15px #000000;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-}
-
-/* ==========================================================================
-   Responsive utility classes
-   ========================================================================== */
-
-
-/* IE10 Metro responsive
-   Required for Windows 8 Metro split-screen snapping with IE10
-   Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/*/
-@-ms-viewport{
-  width: device-width;
-}
-
-/* Hide from screenreaders and browsers
-   Credit: HTML5 Boilerplate*/
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-
-
-/*For desktops*/
-.visible-phone     { display: none !important; }
-.visible-tablet    { display: none !important; }
-.hidden-phone      { }
-.hidden-tablet     { }
-.hidden-desktop    { display: none !important; }
-.visible-desktop   { display: inherit !important; }
-
-/* Tablets & small desktops only*/
-@media (min-width: 768px) and (max-width: 979px) {
-  .hidden-desktop    { display: inherit !important; }
-  .visible-desktop   { display: none !important ; }
-  .visible-tablet    { display: inherit !important; }
-  .hidden-tablet     { display: none !important; }
-}
-
-/*Phones only*/
-@media (max-width: 767px) {
-  .hidden-desktop    { display: inherit !important; }
-  .visible-desktop   { display: none !important; }
-  .visible-phone     { display: inherit !important; }
-  .hidden-phone      { display: none !important; }
-}
-
-/*Print utilities*/
-.visible-print    { display: none !important; }
-.hidden-print     { }
-
-@media print {
-  .visible-print  { display: inherit !important; }
-  .hidden-print   { display: none !important; }
-}
-
+/* Most styles are loaded by the skin css at this time */
 
 /* ==========================================================================
    Media Queries

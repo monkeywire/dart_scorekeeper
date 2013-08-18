@@ -1,0 +1,107 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+    /* Styles */
+    #dart-board {
+        left: 10%;
+        top: 10%;
+        width: 40%;
+        /*use padding-bottom to set height = width*/
+        height: 0px;
+        padding-bottom: 40%;
+    }
+
+    .dart {
+        width: 15%;
+        height: 15%;
+    }
+
+    #view-glass {
+        left: 11%;
+        top: 5%;
+        width: 5%;
+        /*use padding-bottom to set height = width*/
+        height: 0px;
+        padding-bottom: 5%;
+    }
+
+    #chalk-board {
+        width: 35%;
+        height: 80%;
+        top: 10%;
+        left: 60%;
+    }
+
+    #end-turn-button {
+        top: 5%;
+        left: 5%;
+        width: 5%;
+        /*use padding-bottom to set height = width*/
+        height: 0px;
+        padding-bottom: 5%;
+    }
+
+    #menu {
+        top: 25%;
+        left: 20%;
+        width: 20%;
+        /*use padding-bottom to set height = width*/
+        height: 0px;
+        padding-bottom: 20%;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
