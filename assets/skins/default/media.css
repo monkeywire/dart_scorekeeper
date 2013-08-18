@@ -56,6 +56,12 @@ and (min-width : 321px) {
         height: 0px;
         padding-bottom: 20%;
     }
+
+    #menu-button {
+        margin-top: 2;
+        height: 26px;
+        width: 26px;
+    }
 }
 
 /* Smartphones (portrait) ----------- */

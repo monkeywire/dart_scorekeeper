@@ -1,13 +1,16 @@
-Menu = function(elementId) {
+Menu = function(elementId, buttonId) {
     var self = this;
-    self.el = document.getElementById(elementId);
+    self.el        = document.getElementById(elementId);
+    self.buttonEl  = document.getElementById(buttonId);
     self.menuTitle = ko.observable();
     self.menuItems = ko.observableArray();
     ko.applyBindings(self, self.el);
+    self.buttonEl.setAttribute('onclick', 'app.menu();')
 }
 
 Menu.prototype.showMain = function() {
     var self = this;
+    self.show();
     self.menuTitle('Main Menu');
     self.menuItems.removeAll();
     self.menuItems.push(
@@ -15,14 +18,14 @@ Menu.prototype.showMain = function() {
             text: 'New Game',
             onClick: function() {
                 app.newGame();
-                app.menu.hide();
+                app.menuView.hide();
             },
         });
     self.menuItems.push(
         {
             text: 'Resume Game',
             onClick: function() {
-                app.menu.hide();
+                app.menuView.hide();
             },
         }
     );

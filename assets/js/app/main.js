@@ -2,10 +2,10 @@ App = function() {
     var self = this;
     self.dartBoard       = new Dartboard('dart-board');
     self.imageMap        = new ImageMap('dart-board-map', 600);
-    self.menu            = new Menu('menu');
+    self.menuView        = new Menu('menu', 'menu-button');
     self.chalkboardModel = new ChalkboardModel('chalk-board', 301, ['player1', 'player2']);
     self.initLayout();
-    self.menu.showMain();
+    self.menuView.showMain();
 };
 
 App.prototype.initLayout = function() {
@@ -21,6 +21,11 @@ App.prototype.newGame = function() {
                                              self.game,
                                              self.dartBoard,
                                              self.chalkboardModel);
+}
+
+App.prototype.menu = function() {
+    var self = this;
+    self.menuView.showMain();
 }
 
 app = new App();
