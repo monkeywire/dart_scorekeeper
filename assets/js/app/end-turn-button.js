@@ -1,9 +1,6 @@
-EndTurnButton = function(id, game, dartboard, chalkBoardViewModel) {
+EndTurnButton = function(id) {
     var self = this;
-    self.el    = document.getElementById(id);
-    self.dartboard  = dartboard;
-    self.game       = game;
-    self.chalkBoard = chalkBoardViewModel;
+    self.el  = document.getElementById(id);
     self.init();
 }
 
@@ -15,23 +12,24 @@ EndTurnButton.prototype.init = function() {
 EndTurnButton.prototype.click = function() {
     var self = this;
     self.totalDarts();
-    self.dartboard.clearDarts();
-    self.chalkBoard.playerTurn(self.game.currentPlayerName());
-    self.chalkBoard.round(self.game.round);
-    self.skin.onClick(self.el);
+    app.dartboard.clearDarts();
+    //TODO Move these chalkboard assignments a KnockOut.JS binding.
+    app.chalkboard.playerTurn(app.game.currentPlayerName());
+    app.chalkboard.round(app.game.round);
+    self.skin.onClickEffects(self.el);
 }
 
 EndTurnButton.prototype.totalDarts = function() {
     var self = this;
-    var playerTurn = self.game.playerTurn;
+    var playerTurn = app.game.playerTurn;
     for(i = 0; i < 3; i++) {
-        if(self.dartboard.darts[i]) {
-            var dart = self.dartboard.darts[i].location;
-            self.game.addDart(dart.area, dart.value, dart.isDouble );
+        if(app.dartboard.darts[i]) {
+            var dart = app.dartboard.darts[i].location;
+            app.game.addDart(dart.area, dart.value, dart.isDouble );
         } else {
-            self.game.addDart('miss', 0, false);
+            app.game.addDart('miss', 0, false);
         }
     };
-    var playerScore = self.game.playerScoreByIndex(playerTurn);
-    self.chalkBoard.addScore(playerTurn, 301 - playerScore);
+    var playerScore = app.game.playerScoreByIndex(playerTurn);
+    app.chalkboard.addScore(playerTurn, 301 - playerScore);
 }

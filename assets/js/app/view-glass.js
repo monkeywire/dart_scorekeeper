@@ -1,23 +1,22 @@
-ViewGlass = function(id) {
-    var self = this;
+ViewGlass = function(id, zoom) {
+    var self      = this;
+    self.zoom     = zoom;
     self.element  = document.getElementById(id);
-    self.updateView();
+    // self.updateView();
 }
 
-ViewGlass.prototype.center = function(width, x, y) {
-    var self = this;
-    self.updateView(width, x, y);
-}
-
-ViewGlass.prototype.updateView = function(width, x, y) {
-    var self = this;
-    var zoom = 2;
+ViewGlass.prototype.centerOn = function(x, y) {
+    var self      = this;
+    var bkgWidth  = app.dartboard.getWidthValue();
     var selfWidth = self.getWidthValue();
-    //We need to use a percentage here, since a negative px value will not work
-    var left = -((x * zoom) - (selfWidth / zoom));
-    var top  = -((y * zoom) - (selfWidth /zoom ));
-    self.element.style.backgroundSize = width * zoom+ 'px ' + width * zoom+ 'px';
-    self.element.style.backgroundPosition = left + 'px ' + top + 'px';
+
+    var left   = -((x * self.zoom) - (selfWidth / self.zoom));
+    var top    = -((y * self.zoom) - (selfWidth / self.zoom ));
+    var height = bkgWidth * self.zoom;
+    var width  = bkgWidth * self.zoom;
+
+    self.element.style.backgroundSize     = height + 'px ' + width + 'px';
+    self.element.style.backgroundPosition = left   + 'px ' + top   + 'px';
 }
 
 ViewGlass.prototype.getWidthValue = function() {

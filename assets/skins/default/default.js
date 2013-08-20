@@ -4,7 +4,7 @@ EndTurnButton.prototype.skin = {
                      new Audio('assets/skins/default/mp3/chalk-on-board-3.mp3'),
                      new Audio('assets/skins/default/mp3/chalk-on-board-4.mp3')),
 
-    onClick: function(el) {
+    onClickEffects: function(el) {
         var self = this;
         self.clickAnimation(el);
         self.clickSound();
@@ -34,7 +34,7 @@ DartPointer.prototype.skin = {
                      new Audio('assets/skins/default/mp3/dart-hit-3.mp3'),
                      new Audio('assets/skins/default/mp3/dart-hit-4.mp3')),
 
-    onPlace: function() {
+    onPlaceEffects: function() {
         var self = this;
         self.placeSound();
     },

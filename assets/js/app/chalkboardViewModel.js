@@ -1,4 +1,4 @@
-ChalkboardModel = function(elementId, startScore, names) {
+ChalkBoard = function(elementId, startScore, names) {
     var self = this;
     self.el           = document.getElementById(elementId);
     self.round        = ko.observable(0);
@@ -9,7 +9,7 @@ ChalkboardModel = function(elementId, startScore, names) {
     ko.applyBindings(self, self.el);
 }
 
-ChalkboardModel.prototype.initPlayers = function(startScore, names) {
+ChalkBoard.prototype.initPlayers = function(startScore, names) {
     var self = this;
     names.forEach( function(name) {
         self.playerNames.push(name);
@@ -17,7 +17,7 @@ ChalkboardModel.prototype.initPlayers = function(startScore, names) {
     });
 }
 
-ChalkboardModel.prototype.addScore = function(index, score) {
+ChalkBoard.prototype.addScore = function(index, score) {
     var self = this;
     self.playerScores()[index].push(score);
 }

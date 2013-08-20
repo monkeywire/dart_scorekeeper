@@ -18,14 +18,14 @@ Menu.prototype.showMain = function() {
             text: 'New Game',
             onClick: function() {
                 app.newGame();
-                app.menuView.hide();
+                self.hide();
             },
         });
     self.menuItems.push(
         {
             text: 'Resume Game',
             onClick: function() {
-                app.menuView.hide();
+                self.hide();
             },
         }
     );
